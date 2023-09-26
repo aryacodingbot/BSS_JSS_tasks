@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body class="container-fluid">
+    <center style="background-color: lightgrey; padding-top: 5%;">
+        <h1 style="text-align: center;">Task: Reverse string</h1>
+        <hr>"
+        <input type="text" id="inputstr">"
+        <button class="btn btn-success" onclick="reverse_string()">Reverse</button>
+        <br> "
+        <label><p id="revstring"></p></label>"
+        <script>
+            function reverse_string() {
+                var inputstring = document.getElementById("inputstr").value;
+                let reversed_str = "";
+                for (var i = inputstring.length - 1; i >= 0; i--) {
+                    reversed_str = reversed_str + inputstring[i];
+                }
+                document.getElementById("revstring").innerHTML = reversed_str;
+            }
+        </script>
+    </center>
+</body>
+
+</html>

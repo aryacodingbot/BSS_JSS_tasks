@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<style>
+    .container-fluid {
+        padding-left: 10%;
+        padding-top: 5%;
+        padding-right: 10%;
+    }
+</style>
+
+<body class="container-fluid">
+    <h1>Task to multiply and divide the numbers</h1>
+    <hr>
+    <label>1st Number:</label>
+    <input type="text" id="input1">
+    <br><br>
+    <label>2nd Number:</label>
+    <input type="text" id="input2">
+    <br><br>
+    <button onclick="Multiply()">Multiply</button>
+    <button onclick="Divide()">Divide</button>
+    <br><br>
+    <p id="mul1"></p>
+    <p id="mul"></p>
+    <p id="div1"></p>
+    <p id="div"></p>
+    <script>
+        function Multiply() {
+            var ip1 = document.getElementById("input1").value;
+            var ip2 = document.getElementById("input2").value;
+            var result1 = ip1 * ip2;
+            document.getElementById("mul1").innerHTML = `<p style: "font-family: Arial">The Result Is </p>`;
+            document.getElementById("mul").innerHTML = result1;
+        }
+
+        function Divide() {
+            var ip1 = document.getElementById("input1").value;
+            var ip2 = document.getElementById("input2").value;
+            var result1 = ip1 / ip2;
+            document.getElementById("mul1").innerHTML = `<p style: "font-family: Arial"> The Result Is </p>`;
+            document.getElementById("mul").innerHTML = result1;
+        }
+    </script>
+</body>
+
+</html>

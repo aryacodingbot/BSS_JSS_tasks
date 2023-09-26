@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<style>
+    form {
+        padding-left: 10%;
+        padding-top: 3%;
+    }
+</style>
+
+<body class="container">
+    <form class="form form-inline" action="https://ethnus.com/" onsubmit="return validate()">
+        <label>Name:</label>
+        <input type="text" class="form-inline" id="txt" onclick="return val_name()">
+        <p id="n1"></p>
+        <label>Email:</label>
+        <input type="email" class="form-inline" id="eml" onclick="return val_email()">
+        <p id="n2"></p>
+        <label>Website</label>
+        <input type="url" class="form-inline" id="url" onclick="return val_url()">
+        <p id="n3"></p>
+        <label>Message:</label>
+        <textarea id="msg" onclick="return val_msg()"></textarea>
+        <p id="n4"></p>
+        <button type="submit" style="border-radius: 10%;" id="btn">Submit</button>
+        <script>
+            function val_name() {
+                var nam = document.getElementById("txt").value;
+                if (nam.length == 0) {
+                    document.getElementById("txt").style.border = `solid red`;
+                    document.getElementById("n1").innerHTML = `<p style = "padding-left: 50px; color: red; ">This field is requird</p>`;
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            function val_email() {
+                var email = document.getElementById("eml").value;
+                if (email.length == 0) {
+                    document.getElementById("eml").style.border = `solid red`;
+                    document.getElementById("n2").innerHTML = `<p style = "padding-left: 50px; color: red; ">A valid Email Address is requird</p>`;
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            function val_url() {
+                var url = document.getElementById("url").value;
+                if (url.length == 0) {
+                    document.getElementById("url").style.border = `solid red`;
+                    document.getElementById("n3").innerHTML = `<p style = "padding-left: 50px; color: red; ">Valid url is requird</p>`;
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            function val_msg() {
+                var msg = document.getElementById("msg").value;
+                if (msg.length == 0) {
+                    document.getElementById("msg").style.border = `solid red`;
+                    document.getElementById("n4").innerHTML = `<p style = "padding-left: 50px; color: red; ">This field is requird</p>`;
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            function validate() {
+                var val1 = val_name();
+                var val2 = val_email();
+                var val3 = val_msg();
+                var val4 = val_url();
+                if (val1.value == "" && val2.value == "" && val3.value == "" && val4.value == "") {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        </script>
+</body>
+
+</html>
